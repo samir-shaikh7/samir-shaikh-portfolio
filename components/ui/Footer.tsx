@@ -38,7 +38,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="bg-white dark:bg-black border-t border-gray-200 dark:border-border z-99999 relative"
+      className="bg-white dark:bg-black border-t border-gray-200 dark:border-border relative z-10"
     >
       <div className="max-w-[1280px] mx-auto px-6">
         {/* ── Personal Contact Section ── */}

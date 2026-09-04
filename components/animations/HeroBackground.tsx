@@ -3,7 +3,6 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Starfield from "./framer-modules/StarsArea";
-import Nova from "./framer-modules/Orb1";
 
 export default function HeroBackground() {
   const { resolvedTheme, theme } = useTheme();

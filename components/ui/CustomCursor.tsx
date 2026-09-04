@@ -70,7 +70,7 @@ export default function CustomCursor() {
     <>
       {/* Central small dot - moves exactly with mouse */}
       <motion.div
-        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-accent pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 mix-blend-difference hidden lg:block"
+        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-accent pointer-events-none z-[999999] -translate-x-1/2 -translate-y-1/2 mix-blend-difference hidden lg:block"
         style={{
           x: mouseX,
           y: mouseY,
@@ -83,7 +83,7 @@ export default function CustomCursor() {
 
       {/* Outer glowing ring - trails behind with spring damping */}
       <motion.div
-        className="fixed top-0 left-0 rounded-full border border-accent/50 bg-accent/5 pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 hidden lg:block"
+        className="fixed top-0 left-0 rounded-full border border-accent/50 bg-accent/5 pointer-events-none z-[999998] -translate-x-1/2 -translate-y-1/2 hidden lg:block"
         style={{
           x: trailX,
           y: trailY,

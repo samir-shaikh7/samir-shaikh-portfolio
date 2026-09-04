@@ -11,86 +11,140 @@ import {
   Globe,
   ShoppingCart,
   Code2,
+  Shield,
+  Terminal,
 } from "lucide-react";
+import ProjectCard, { type ProjectData } from "@/components/ui/ProjectCard";
 
-const mainProjects = [
+const featuredProjects: ProjectData[] = [
   {
-    title: "AWS Cloud Infrastructure",
+    category: "AWS / ARCHITECTURE",
+    title: "AWS Three-Tier Web Application",
     description:
-      "Designed and deployed a multi-tier AWS architecture using EC2, VPC, S3, RDS, ALB, Auto Scaling, and CloudWatch for monitoring and high availability.",
-    tech: ["AWS", "EC2", "VPC", "RDS", "ALB", "CloudWatch"],
+      "Designed a highly available three-tier architecture using AWS VPC, EC2, ALB, and RDS with proper subnet segmentation and security group configuration.",
+    tech: ["AWS", "VPC", "EC2", "ALB", "RDS", "CloudWatch"],
     icon: Cloud,
     color: "from-orange-500/20 to-amber-500/20",
     delay: 0.1,
+    github: "https://github.com/samir-shaikh7/AWS-Three-Tier-Web-Application",
   },
   {
-    title: "Jenkins CI/CD Pipeline",
+    category: "DEVOPS / CI-CD",
+    title: "Enterprise Java DevOps CI/CD",
     description:
-      "Built an automated CI/CD pipeline using Jenkins with GitHub webhook integration, multi-stage builds, automated testing, and deployment to AWS.",
-    tech: ["Jenkins", "GitHub", "Docker", "AWS", "Shell"],
+      "Built an end-to-end CI/CD pipeline using Jenkins with GitHub webhook integration, Maven builds, SonarQube analysis, and automated deployment to AWS.",
+    tech: ["Jenkins", "Maven", "GitHub", "SonarQube", "AWS"],
     icon: GitBranch,
     color: "from-red-500/20 to-pink-500/20",
     delay: 0.15,
+    github: "https://github.com/samir-shaikh7/enterprise-java-devops-cicd",
   },
   {
-    title: "Dockerized Application",
+    category: "AWS / CLOUD",
+    title: "AWS ALB Zero Downtime Deployment",
+    description:
+      "Implemented a zero-downtime deployment strategy using AWS Application Load Balancer with target group switching, health checks, and rolling updates.",
+    tech: ["AWS", "ALB", "EC2", "Target Groups", "Shell"],
+    icon: Shield,
+    color: "from-emerald-500/20 to-teal-500/20",
+    delay: 0.2,
+    github: "https://github.com/samir-shaikh7/aws-alb-zero-downtime-deployment",
+  },
+  {
+    category: "CONTAINERS",
+    title: "Dockerized Full-Stack Application",
     description:
       "Containerized a full-stack application using Docker with multi-stage builds, Docker Compose for multi-container orchestration, and optimized image sizes.",
     tech: ["Docker", "Docker Compose", "Node.js", "Nginx"],
     icon: Container,
     color: "from-blue-500/20 to-cyan-500/20",
-    delay: 0.2,
-  },
-  {
-    title: "Terraform Infrastructure as Code",
-    description:
-      "Provisioned complete AWS infrastructure using Terraform — including VPC, subnets, security groups, EC2 instances, S3, and IAM roles with state management.",
-    tech: ["Terraform", "AWS", "IaC", "HCL"],
-    icon: FileCode,
-    color: "from-violet-500/20 to-purple-500/20",
     delay: 0.25,
   },
   {
-    title: "Kubernetes Practical Project",
+    category: "INFRASTRUCTURE AS CODE",
+    title: "Terraform AWS Infrastructure",
+    description:
+      "Provisioned complete AWS infrastructure using Terraform — including VPC, subnets, security groups, EC2 instances, S3, and IAM roles with remote state management.",
+    tech: ["Terraform", "AWS", "HCL", "S3", "IAM"],
+    icon: FileCode,
+    color: "from-violet-500/20 to-purple-500/20",
+    delay: 0.3,
+  },
+  {
+    category: "CONTAINERS / ORCHESTRATION",
+    title: "Kubernetes Practical Deployment",
     description:
       "Deployed and managed containerized applications on Kubernetes with Deployments, Services, Ingress, ConfigMaps, Secrets, and Horizontal Pod Autoscaling.",
     tech: ["Kubernetes", "Docker", "kubectl", "YAML"],
     icon: Server,
     color: "from-blue-600/20 to-indigo-500/20",
-    delay: 0.3,
+    delay: 0.35,
   },
   {
-    title: "Library Management System",
+    category: "LINUX / DEVOPS",
+    title: "Linux System Administration",
     description:
-      "Built a full-stack Library Management System with user authentication, book cataloging, issue/return tracking, and admin dashboard functionality.",
-    tech: ["Python", "MySQL", "HTML/CSS", "Flask"],
-    icon: BookOpen,
-    color: "from-green-500/20 to-emerald-500/20",
-    delay: 0.35,
+      "Comprehensive Linux system administration project covering user management, file permissions, process control, service management, networking, and shell scripting.",
+    tech: ["Linux", "Bash", "Networking", "Systemd", "Cron"],
+    icon: Terminal,
+    color: "from-yellow-500/20 to-orange-500/20",
+    delay: 0.4,
+    github: "https://github.com/samir-shaikh7/linux-system-administration-project",
   },
 ];
 
-const supportingProjects = [
+const webDevProjects: ProjectData[] = [
   {
-    title: "Portfolio Website",
-    description: "Personal portfolio website built with Next.js and modern web technologies.",
-    tech: ["Next.js", "React", "Tailwind CSS"],
+    category: "WEB DEVELOPMENT",
+    title: "Filipino Food Kuwait",
+    description:
+      "Full-stack food ordering website for a restaurant in Kuwait with product catalog, cart functionality, and WhatsApp-based order system.",
+    tech: ["Next.js", "React", "Supabase", "Vercel"],
     icon: Globe,
+    color: "from-green-500/20 to-emerald-500/20",
     delay: 0.1,
+    liveUrl: "https://www.filipinofood.online",
   },
   {
+    category: "WEB DEVELOPMENT",
+    title: "Soniya Patange Makeover",
+    description:
+      "Professional portfolio website for a makeup artist showcasing services, gallery, and client booking information.",
+    tech: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    icon: Globe,
+    color: "from-pink-500/20 to-rose-500/20",
+    delay: 0.15,
+    liveUrl: "https://soniyapatangemakeups.in",
+  },
+  {
+    category: "WEB DEVELOPMENT",
+    title: "Portfolio Website",
+    description:
+      "Personal cloud engineering portfolio built with Next.js, featuring dark mode, smooth animations, and responsive design.",
+    tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    icon: Code2,
+    color: "from-cyan-500/20 to-blue-500/20",
+    delay: 0.2,
+  },
+  {
+    category: "ACADEMIC PROJECT",
+    title: "Library Management System",
+    description:
+      "Full-stack Library Management System with user authentication, book cataloging, issue/return tracking, and admin dashboard.",
+    tech: ["Python", "Flask", "MySQL", "HTML/CSS"],
+    icon: BookOpen,
+    color: "from-amber-500/20 to-yellow-500/20",
+    delay: 0.25,
+  },
+  {
+    category: "WEB DEVELOPMENT",
     title: "E-Commerce Frontend",
-    description: "Responsive e-commerce UI with product listing, cart, and checkout flow.",
+    description:
+      "Responsive e-commerce user interface with product listing, shopping cart, and checkout flow built with modern CSS techniques.",
     tech: ["React", "CSS", "JavaScript"],
     icon: ShoppingCart,
-    delay: 0.15,
-  },
-  {
-    title: "Responsive Web Layouts",
-    description: "Collection of responsive web designs showcasing modern CSS and layout techniques.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    icon: Code2,
-    delay: 0.2,
+    color: "from-indigo-500/20 to-violet-500/20",
+    delay: 0.3,
   },
 ];
 
@@ -98,6 +152,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-[120px] bg-gray-50 dark:bg-[#0A0A0A]">
       <div className="max-w-[1280px] mx-auto px-6">
+        {/* Featured Projects Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -112,100 +167,46 @@ export default function Projects() {
               </h2>
             </div>
             <p className="text-gray-600 dark:text-muted max-w-xl text-sm md:text-base">
-              Hands-on Cloud & DevOps projects demonstrating practical experience
+              Hands-on Cloud &amp; DevOps projects demonstrating practical experience
               with AWS, CI/CD, containerization, and Infrastructure as Code.
             </p>
           </div>
         </motion.div>
 
-        {/* Main DevOps Projects */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {mainProjects.map((project) => (
-            <motion.div
+        {/* Featured Projects Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-20">
+          {featuredProjects.map((project) => (
+            <ProjectCard
               key={project.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: project.delay }}
-              whileHover={{ y: -6 }}
-              className="group relative bg-white dark:bg-card rounded-2xl border border-gray-200 dark:border-border p-6 transition-all hover:border-accent/50 dark:hover:border-accent/50 hover:shadow-[0_0_30px_rgba(0,229,255,0.08)]"
-            >
-              {/* Icon */}
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
-                <project.icon className="w-5 h-5 text-foreground dark:text-white" />
-              </div>
-
-              {/* Tech Tags */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tech.map((t, idx) => (
-                  <span
-                    key={idx}
-                    className="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-muted border border-gray-200 dark:border-white/10"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-
-              <h3 className="text-xl font-bold text-black dark:text-white mb-3 group-hover:text-accent transition-colors">
-                {project.title}
-              </h3>
-              <p className="text-gray-600 dark:text-muted leading-relaxed text-sm">
-                {project.description}
-              </p>
-            </motion.div>
+              project={project}
+              featured
+            />
           ))}
         </div>
 
-        {/* Supporting Web Dev Projects */}
+        {/* Web Development Projects Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-8"
+          className="mb-10"
         >
           <h3 className="text-xl md:text-2xl font-bold text-black dark:text-white mb-2">
-            Web Development Projects
+            Additional Development Projects
           </h3>
-          <p className="text-gray-600 dark:text-muted text-sm">
-            Supporting projects demonstrating frontend and full-stack web development skills.
+          <p className="text-gray-600 dark:text-muted text-sm md:text-base">
+            Web development and academic projects demonstrating frontend, full-stack, and software engineering skills.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {supportingProjects.map((project) => (
-            <motion.div
+        {/* Web Development Projects Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {webDevProjects.map((project) => (
+            <ProjectCard
               key={project.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: project.delay }}
-              whileHover={{ y: -4 }}
-              className="group bg-white dark:bg-card rounded-xl border border-gray-200 dark:border-border p-5 transition-all hover:border-accent/30"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-9 h-9 rounded-lg bg-gray-100 dark:bg-white/5 flex items-center justify-center">
-                  <project.icon className="w-4 h-4 text-gray-500 dark:text-muted" />
-                </div>
-                <h4 className="font-semibold text-black dark:text-white group-hover:text-accent transition-colors">
-                  {project.title}
-                </h4>
-              </div>
-              <p className="text-gray-600 dark:text-muted text-sm leading-relaxed mb-3">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-1.5">
-                {project.tech.map((t, idx) => (
-                  <span
-                    key={idx}
-                    className="text-[11px] font-medium px-2 py-0.5 rounded-full bg-gray-50 dark:bg-white/5 text-gray-500 dark:text-muted border border-gray-100 dark:border-white/5"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
+              project={project}
+            />
           ))}
         </div>
       </div>

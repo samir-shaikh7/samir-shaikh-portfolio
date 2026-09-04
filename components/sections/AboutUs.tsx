@@ -15,16 +15,16 @@ function GithubIcon({ className }: { className?: string }) {
 
 const highlights = [
   {
-    value: "AWS",
-    label: "Cloud Platform",
+    value: "AWS Cloud",
+    label: "Primary Platform",
   },
   {
-    value: "DevOps",
-    label: "Engineering Focus",
+    value: "DevOps & CI/CD",
+    label: "Core Focus",
   },
   {
-    value: "IaC",
-    label: "Terraform & Automation",
+    value: "Linux & IaC",
+    label: "Infrastructure",
   },
 ];
 
@@ -59,17 +59,25 @@ export default function AboutUs() {
               </h2>
 
               <p className="text-base md:text-lg text-gray-600 dark:text-muted leading-relaxed mb-6">
-                I&apos;m Samir Shaikh, an early-career AWS Cloud & DevOps
-                Engineer focused on building practical expertise in cloud
-                infrastructure, containerization, CI/CD automation, and
-                Infrastructure as Code.
+                I&apos;m Samir Shaikh, an early-career AWS Cloud &amp; DevOps
+                Engineer based in Hyderabad, India. I hold a Bachelor of Computer
+                Applications (BCA) from Institute of Technology &amp; Management
+                College, Nanded, and I specialize in cloud infrastructure,
+                CI/CD automation, containerization, and Infrastructure as Code.
+              </p>
+
+              <p className="text-gray-600 dark:text-muted leading-relaxed mb-4">
+                Through hands-on training at Full Stack Academy, I&apos;ve built
+                practical experience with AWS services (EC2, S3, IAM, VPC, Route 53,
+                CloudWatch, ALB, Auto Scaling), Linux administration, Docker,
+                Kubernetes, Terraform, Jenkins, and shell scripting.
               </p>
 
               <p className="text-gray-600 dark:text-muted leading-relaxed mb-10">
-                Currently pursuing hands-on training in AWS services, Docker,
-                Kubernetes, Terraform, Jenkins, and Linux system administration.
-                I believe in learning by doing — every project in my portfolio
-                represents real, practical work, not theoretical exercises.
+                I enjoy building and automating cloud infrastructure — from
+                provisioning resources and configuring networking to setting up
+                CI/CD pipelines and managing deployments. Every project in my
+                portfolio represents real, hands-on work.
               </p>
 
               {/* Highlights */}

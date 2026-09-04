@@ -1,14 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Calendar, ShieldCheck } from "lucide-react";
+import { Award, Calendar } from "lucide-react";
 
 interface Certification {
   name: string;
   issuer: string;
   issued: string;
-  credentialId?: string;
-  skills?: string[];
 }
 
 const certifications: Certification[] = [
@@ -26,31 +24,26 @@ const certifications: Certification[] = [
     name: "Generative AI with AWS",
     issuer: "Analytics Vidhya",
     issued: "February 2026",
-    skills: ["Cloud Computing", "Generative AI", "Prompt Engineering"],
   },
   {
     name: "Virtual Internship Program in Cloud Computing",
     issuer: "CodeAlpha",
     issued: "February 2026",
-    credentialId: "CA/DF/1/14136",
   },
   {
     name: "Linux Challenge",
     issuer: "Full Stack Academy",
     issued: "July 2026",
-    skills: ["Linux", "Linux System Administration"],
   },
   {
     name: "AWS Challenge",
     issuer: "Full Stack Academy",
     issued: "August 2026",
-    skills: ["AWS", "EC2", "AWS Cloud Infrastructure"],
   },
   {
     name: "HTML & CSS",
     issuer: "HCL GUVI",
     issued: "June 2025",
-    skills: ["HTML5", "CSS3"],
   },
 ];
 
@@ -110,30 +103,10 @@ export default function Certifications() {
                   {cert.name}
                 </h3>
 
-                <p className="text-sm font-medium text-gray-700 dark:text-slate-300 mb-3">
+                <p className="text-sm font-medium text-gray-700 dark:text-slate-300">
                   {cert.issuer}
                 </p>
-
-                {cert.credentialId && (
-                  <div className="inline-flex items-center gap-1.5 text-xs text-gray-500 dark:text-muted bg-gray-50 dark:bg-white/[0.03] px-3 py-1.5 rounded-lg border border-gray-200 dark:border-white/5 mb-3">
-                    <ShieldCheck className="w-3.5 h-3.5 text-accent shrink-0" />
-                    <span>Credential ID: <strong className="font-mono text-gray-700 dark:text-slate-200">{cert.credentialId}</strong></span>
-                  </div>
-                )}
               </div>
-
-              {cert.skills && cert.skills.length > 0 && (
-                <div className="mt-4 pt-4 border-t border-gray-100 dark:border-white/5 flex flex-wrap gap-1.5">
-                  {cert.skills.map((skill, sIdx) => (
-                    <span
-                      key={sIdx}
-                      className="text-[11px] font-medium px-2.5 py-1 rounded-full bg-accent/5 dark:bg-accent/10 text-accent border border-accent/20"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              )}
             </motion.div>
           ))}
         </div>

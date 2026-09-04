@@ -82,7 +82,7 @@ const expertise = [
 
 export default function Services() {
   return (
-    <section id="expertise" className="py-[120px] bg-white dark:bg-black">
+    <section id="skills" className="py-[120px] bg-white dark:bg-black">
       <div className="max-w-[1280px] mx-auto px-6">
 
         {/* Heading */}
@@ -94,7 +94,7 @@ export default function Services() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-[40px] font-bold text-black dark:text-white mb-4">
-            Technical Expertise
+            Skills
           </h2>
 
           <p className="text-gray-600 dark:text-muted max-w-2xl mx-auto">

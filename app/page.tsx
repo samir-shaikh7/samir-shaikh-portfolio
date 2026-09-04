@@ -2,9 +2,10 @@ import Navbar from "@/components/ui/Navbar";
 import Hero from "@/components/sections/Hero";
 import TrustedBy from "@/components/sections/TrustedBy";
 import Services from "@/components/sections/Services";
+import TechStack from "@/components/sections/TechStack";
 import Portfolio from "@/components/sections/Portfolio";
 import Process from "@/components/sections/Process";
-import TechStack from "@/components/sections/TechStack";
+import Certifications from "@/components/sections/Certifications";
 import AboutUs from "@/components/sections/AboutUs";
 import CareerFocus from "@/components/sections/CareerFocus";
 import FAQ from "@/components/sections/FAQ";
@@ -99,10 +100,10 @@ export default function Home() {
       <Hero />
       <TrustedBy />
       <Services />
+      <TechStack />
       <Portfolio />
       <Process />
-      <div className="border-t border-border" />
-      <TechStack />
+      <Certifications />
       <AboutUs />
       <CareerFocus />
       <FAQ />

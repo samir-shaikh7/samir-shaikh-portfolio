@@ -4,55 +4,11 @@ import { motion } from "framer-motion";
 import {
   Briefcase,
   GraduationCap,
-  Award,
   Calendar,
   MapPin,
 } from "lucide-react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useIsDesktop } from "../hooks/useIsDesktop";
-
-const certifications = [
-  {
-    name: "AWS Cloud Practitioner Essentials",
-    issuer: "Amazon Web Services (AWS)",
-    issued: "January 2026",
-  },
-  {
-    name: "AWS Challenge",
-    issuer: "Full Stack Academy",
-    issued: "August 2026",
-    skills: ["AWS", "EC2", "AWS Cloud Infrastructure"],
-  },
-  {
-    name: "Linux Challenge",
-    issuer: "Full Stack Academy",
-    issued: "July 2026",
-    skills: ["Linux", "Linux System Administration"],
-  },
-  {
-    name: "AWS and DevOps",
-    issuer: "Full Stack Academy",
-    issued: "January 2026",
-  },
-  {
-    name: "Generative AI with AWS",
-    issuer: "Analytics Vidhya",
-    issued: "February 2026",
-    skills: ["Cloud Computing", "Generative AI", "Prompt Engineering"],
-  },
-  {
-    name: "Virtual Internship Program in Cloud Computing",
-    issuer: "CodeAlpha",
-    issued: "February 2026",
-    credentialId: "CA/DF/1/14136",
-  },
-  {
-    name: "HTML & CSS",
-    issuer: "HCL GUVI",
-    issued: "June 2025",
-    skills: ["HTML5", "CSS3"],
-  },
-];
 
 export default function Process() {
   const isDesktop = useIsDesktop();
@@ -187,62 +143,6 @@ export default function Process() {
                     CGPA: 8.56
                   </span>
                 </div>
-              </div>
-            </motion.div>
-
-            {/* Certifications */}
-            <motion.div
-              initial={{ opacity: 0, x: -25 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.45, delay: 0.16 }}
-              className="relative pl-14 group"
-            >
-              <div className="absolute left-[10px] top-2 w-5 h-5 rounded-full bg-white dark:bg-background border-4 border-gray-300 dark:border-border group-hover:border-primary transition-all duration-300" />
-
-              <div className="flex items-center gap-4 mb-2">
-                <span className="text-xs font-mono text-gray-400">03</span>
-                <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center">
-                  <Award className="w-5 h-5 text-amber-500" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-black dark:text-white">
-                    Certifications
-                  </h3>
-                </div>
-              </div>
-
-              <div className="ml-14 space-y-4 mt-3">
-                {certifications.map((cert, i) => (
-                  <div
-                    key={i}
-                    className="p-3.5 rounded-xl bg-gray-50 dark:bg-white/[0.03] border border-gray-100 dark:border-white/5"
-                  >
-                    <h4 className="text-sm font-semibold text-black dark:text-white mb-1">
-                      {cert.name}
-                    </h4>
-                    <p className="text-xs text-gray-500 dark:text-muted">
-                      {cert.issuer} · {cert.issued}
-                    </p>
-                    {cert.credentialId && (
-                      <p className="text-xs text-gray-400 dark:text-muted/70 mt-1">
-                        Credential ID: {cert.credentialId}
-                      </p>
-                    )}
-                    {cert.skills && cert.skills.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5 mt-2">
-                        {cert.skills.map((skill, j) => (
-                          <span
-                            key={j}
-                            className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-accent/5 dark:bg-accent/10 text-accent border border-accent/15"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
               </div>
             </motion.div>
           </div>

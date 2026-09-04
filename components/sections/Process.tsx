@@ -11,6 +11,49 @@ import {
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useIsDesktop } from "../hooks/useIsDesktop";
 
+const certifications = [
+  {
+    name: "AWS Cloud Practitioner Essentials",
+    issuer: "Amazon Web Services (AWS)",
+    issued: "January 2026",
+  },
+  {
+    name: "AWS Challenge",
+    issuer: "Full Stack Academy",
+    issued: "August 2026",
+    skills: ["AWS", "EC2", "AWS Cloud Infrastructure"],
+  },
+  {
+    name: "Linux Challenge",
+    issuer: "Full Stack Academy",
+    issued: "July 2026",
+    skills: ["Linux", "Linux System Administration"],
+  },
+  {
+    name: "AWS and DevOps",
+    issuer: "Full Stack Academy",
+    issued: "January 2026",
+  },
+  {
+    name: "Generative AI with AWS",
+    issuer: "Analytics Vidhya",
+    issued: "February 2026",
+    skills: ["Cloud Computing", "Generative AI", "Prompt Engineering"],
+  },
+  {
+    name: "Virtual Internship Program in Cloud Computing",
+    issuer: "CodeAlpha",
+    issued: "February 2026",
+    credentialId: "CA/DF/1/14136",
+  },
+  {
+    name: "HTML & CSS",
+    issuer: "HCL GUVI",
+    issued: "June 2025",
+    skills: ["HTML5", "CSS3"],
+  },
+];
+
 export default function Process() {
   const isDesktop = useIsDesktop();
 
@@ -85,11 +128,12 @@ export default function Process() {
                 </div>
                 <ul className="space-y-1.5 mt-3">
                   {[
-                    "Hands-on training with AWS services (EC2, S3, VPC, IAM, RDS, Lambda)",
-                    "Building and managing CI/CD pipelines using Jenkins",
-                    "Containerization with Docker and Kubernetes orchestration",
-                    "Infrastructure provisioning with Terraform (IaC)",
-                    "Linux system administration and shell scripting",
+                    "AWS cloud infrastructure — EC2, S3, IAM, VPC, Route 53, CloudWatch, Load Balancers, Auto Scaling",
+                    "Linux administration, shell scripting, and infrastructure troubleshooting",
+                    "CI/CD pipeline automation using Jenkins, Git, and GitHub",
+                    "Containerization with Docker and orchestration with Kubernetes",
+                    "Infrastructure as Code using Terraform",
+                    "Cloud security, networking, monitoring, and deployment management",
                   ].map((item, i) => (
                     <li
                       key={i}
@@ -120,7 +164,7 @@ export default function Process() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-black dark:text-white">
-                    BCA — Bachelor of Computer Applications
+                    Bachelor of Computer Applications (BCA)
                   </h3>
                 </div>
               </div>
@@ -129,10 +173,13 @@ export default function Process() {
                 <p className="text-base font-medium text-gray-700 dark:text-slate-300">
                   Institute of Technology & Management College, Nanded
                 </p>
+                <p className="text-sm text-gray-500 dark:text-muted">
+                  Swami Ramanand Teerth Marathwada University, Nanded
+                </p>
                 <div className="flex flex-wrap gap-3 text-sm text-gray-500 dark:text-muted">
                   <span className="inline-flex items-center gap-1.5">
                     <Calendar className="w-3.5 h-3.5" />
-                    2026
+                    2023 – 2026
                   </span>
                 </div>
                 <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-accent/5 dark:bg-accent/10 border border-accent/20">
@@ -143,7 +190,7 @@ export default function Process() {
               </div>
             </motion.div>
 
-            {/* Certification */}
+            {/* Certifications */}
             <motion.div
               initial={{ opacity: 0, x: -25 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -160,20 +207,42 @@ export default function Process() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-black dark:text-white">
-                    AWS Cloud Practitioner
+                    Certifications
                   </h3>
                 </div>
               </div>
 
-              <div className="ml-14 space-y-2">
-                <p className="text-base font-medium text-gray-700 dark:text-slate-300">
-                  Amazon Web Services (AWS)
-                </p>
-                <p className="text-sm text-gray-600 dark:text-muted">
-                  Foundational certification validating overall understanding of
-                  the AWS Cloud, including core services, security, architecture,
-                  pricing, and support.
-                </p>
+              <div className="ml-14 space-y-4 mt-3">
+                {certifications.map((cert, i) => (
+                  <div
+                    key={i}
+                    className="p-3.5 rounded-xl bg-gray-50 dark:bg-white/[0.03] border border-gray-100 dark:border-white/5"
+                  >
+                    <h4 className="text-sm font-semibold text-black dark:text-white mb-1">
+                      {cert.name}
+                    </h4>
+                    <p className="text-xs text-gray-500 dark:text-muted">
+                      {cert.issuer} · {cert.issued}
+                    </p>
+                    {cert.credentialId && (
+                      <p className="text-xs text-gray-400 dark:text-muted/70 mt-1">
+                        Credential ID: {cert.credentialId}
+                      </p>
+                    )}
+                    {cert.skills && cert.skills.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 mt-2">
+                        {cert.skills.map((skill, j) => (
+                          <span
+                            key={j}
+                            className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-accent/5 dark:bg-accent/10 text-accent border border-accent/15"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
             </motion.div>
           </div>

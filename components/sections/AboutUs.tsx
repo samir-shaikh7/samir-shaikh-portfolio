@@ -98,7 +98,10 @@ export default function AboutUs() {
               {/* CTA */}
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="#resume"
+                  href="/Samir-Shaikh-Resume.pdf"
+                  download="Samir-Shaikh-Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-accent text-white dark:text-black font-semibold hover:opacity-90 transition-all"
                 >
                   <Download className="w-4 h-4" />

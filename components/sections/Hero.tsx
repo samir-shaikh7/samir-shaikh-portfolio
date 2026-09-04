@@ -292,7 +292,13 @@ export default function Hero() {
               </Link>
 
               {/* Secondary – Download Resume */}
-              <a href="#resume" className="w-full sm:w-auto">
+              <a
+                href="/Samir-Shaikh-Resume.pdf"
+                download="Samir-Shaikh-Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
                 <motion.button
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}

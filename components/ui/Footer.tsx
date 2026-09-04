@@ -303,14 +303,6 @@ export default function Footer() {
                   Career Focus
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/#faq"
-                  className="text-gray-500 dark:text-muted hover:text-black dark:hover:text-white transition-colors"
-                >
-                  FAQ
-                </Link>
-              </li>
             </ul>
           </div>
 

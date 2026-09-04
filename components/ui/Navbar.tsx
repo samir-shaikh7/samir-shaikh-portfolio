@@ -20,7 +20,6 @@ export default function Navbar() {
     { name: "Certifications", href: "/#certifications" },
     { name: "About", href: "/#about" },
     { name: "Focus", href: "/#career-focus" },
-    { name: "FAQ", href: "/#faq" },
   ];
 
   useMotionValueEvent(scrollY, "change", (latest) => {

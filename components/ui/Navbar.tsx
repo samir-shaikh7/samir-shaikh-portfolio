@@ -49,11 +49,11 @@ export default function Navbar() {
     >
       <div className="max-w-[1280px] mx-auto px-6 h-full flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold tracking-tighter flex items-center gap-1">
-          <span className="bg-gradient-to-r from-black to-black/70 dark:from-white dark:to-white/70 bg-clip-text text-transparent">
-            Samir
+        <Link href="/" className="text-xl font-black tracking-[0.16em] uppercase flex items-center gap-0.5 group">
+          <span className="bg-gradient-to-r from-black via-black/85 to-accent dark:from-white dark:via-white/90 dark:to-accent bg-clip-text text-transparent">
+            SAM
           </span>
-          <span className="text-accent">.</span>
+          <span className="text-accent font-extrabold transition-transform group-hover:scale-125">.</span>
         </Link>
 
         {/* Desktop Links */}

@@ -20,7 +20,7 @@ const moirai = Moirai_One({
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#019d91" },
+    { media: "(prefers-color-scheme: light)", color: "#ff9900" },
     { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
   ],
   width: "device-width",

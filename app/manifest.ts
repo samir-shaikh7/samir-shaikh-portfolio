@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'AWS Cloud & DevOps Engineer portfolio — cloud infrastructure, CI/CD automation, Docker, Kubernetes, Terraform, and Infrastructure as Code.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#ffffff',
-    theme_color: '#019d91',
+    background_color: '#0a0a0a',
+    theme_color: '#ff9900',
     icons: [
       {
         src: '/favicon-192x192.png',

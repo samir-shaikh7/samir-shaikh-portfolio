@@ -96,8 +96,10 @@ export default function TechStack() {
 
           {/* Center Hub */}
           <div className="absolute z-20 w-24 h-24 rounded-full bg-white dark:bg-background border border-gray-200 dark:border-border flex items-center justify-center shadow-[0_0_50px_rgba(0,229,255,0.2)]">
-            <span className="text-2xl font-bold bg-linear-to-r from-black to-black/70 dark:from-white dark:to-white/70 bg-clip-text text-transparent">
-              SS
+            <span className="text-2xl font-black tracking-[0.12em] uppercase flex items-center gap-0.5">
+              <span className="bg-gradient-to-r from-black via-black/85 to-accent dark:from-white dark:via-white/90 dark:to-accent bg-clip-text text-transparent">
+                SAM
+              </span>
             </span>
           </div>
 

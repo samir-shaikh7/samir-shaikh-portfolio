@@ -6,6 +6,7 @@ import Portfolio from "@/components/sections/Portfolio";
 import Process from "@/components/sections/Process";
 import TechStack from "@/components/sections/TechStack";
 import AboutUs from "@/components/sections/AboutUs";
+import CareerFocus from "@/components/sections/CareerFocus";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/ui/Footer";
 
@@ -103,6 +104,7 @@ export default function Home() {
       <div className="border-t border-border" />
       <TechStack />
       <AboutUs />
+      <CareerFocus />
       <FAQ />
 
       <Footer />

@@ -34,7 +34,7 @@ export default function AboutUs() {
   return (
     <section
       id="about"
-      className="py-[80px] sm:py-[100px] lg:py-[120px] bg-white dark:bg-black"
+      className="py-10 sm:py-16 bg-white dark:bg-black"
     >
       <div className="max-w-[1280px] mx-auto px-6">
         <div className="relative overflow-hidden rounded-3xl border border-gray-200 dark:border-border bg-gradient-to-br from-gray-50 dark:from-[#161616] to-white dark:to-[#0A0A0A] p-6 sm:p-10 lg:p-16">

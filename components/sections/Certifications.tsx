@@ -51,7 +51,7 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="py-[100px] md:py-[120px] bg-gray-50 dark:bg-background border-t border-gray-200 dark:border-border overflow-hidden"
+      className="py-10 sm:py-16 bg-gray-50 dark:bg-background border-t border-gray-200 dark:border-border overflow-hidden"
     >
       <div className="max-w-[1280px] mx-auto px-6">
         {/* Heading */}

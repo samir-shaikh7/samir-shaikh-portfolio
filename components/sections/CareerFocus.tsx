@@ -45,7 +45,7 @@ export default function CareerFocus() {
   return (
     <section
       id="career-focus"
-      className="py-[100px] md:py-[120px] bg-white dark:bg-black border-t border-gray-200 dark:border-border overflow-hidden"
+      className="py-10 sm:py-16 bg-white dark:bg-black border-t border-gray-200 dark:border-border overflow-hidden"
     >
       <div className="max-w-[1280px] mx-auto px-6">
         {/* Header */}

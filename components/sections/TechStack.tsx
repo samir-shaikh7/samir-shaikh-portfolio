@@ -279,7 +279,7 @@ export default function TechStack() {
   const crownOrigin = isMobile ? { x: 200, y: 274 } : { x: 500, y: 275 };
 
   return (
-    <section className="py-[80px] sm:py-[120px] bg-black overflow-hidden relative select-none">
+    <section className="py-10 sm:py-14 bg-black overflow-hidden relative select-none">
       {/* Global CSS for cinematic animations & reduced-motion safety */}
       <style jsx global>{`
         @keyframes subtleFloat {
@@ -343,7 +343,7 @@ export default function TechStack() {
             <span> Technology Stack</span>
           </h2>
 
-          <p className="text-gray-400 max-w-2xl mx-auto mb-8 sm:mb-12 font-medium text-sm sm:text-base">
+          <p className="text-gray-400 max-w-2xl mx-auto mb-4 sm:mb-6 font-medium text-sm sm:text-base">
             The tools and platforms I use to build, automate, and manage cloud
             infrastructure and deployment pipelines.
           </p>

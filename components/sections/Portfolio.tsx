@@ -84,7 +84,7 @@ const additionalProjects: ProjectData[] = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-[120px] bg-gray-50 dark:bg-[#0A0A0A]">
+    <section id="projects" className="py-10 sm:py-16 bg-gray-50 dark:bg-[#0A0A0A]">
       <div className="max-w-[1280px] mx-auto px-6">
         {/* Featured Projects Header */}
         <motion.div

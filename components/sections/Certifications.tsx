@@ -58,7 +58,7 @@ export default function Certifications() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
@@ -83,7 +83,7 @@ export default function Certifications() {
               key={index}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.45, delay: index * 0.08 }}
               whileHover={{ y: -6 }}
               className="group p-6 rounded-2xl bg-white dark:bg-card border border-gray-200 dark:border-border transition-all hover:border-accent/50 dark:hover:border-accent/50 hover:shadow-[0_0_30px_rgba(0,229,255,0.08)] flex flex-col justify-between"

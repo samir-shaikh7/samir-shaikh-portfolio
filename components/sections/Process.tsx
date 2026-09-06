@@ -24,7 +24,7 @@ export default function Process() {
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="mb-14"
           >
@@ -50,7 +50,7 @@ export default function Process() {
             <motion.div
               initial={{ opacity: 0, x: -25 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.45 }}
               className="relative pl-14 group"
             >
@@ -107,7 +107,7 @@ export default function Process() {
             <motion.div
               initial={{ opacity: 0, x: -25 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.45, delay: 0.08 }}
               className="relative pl-14 group"
             >

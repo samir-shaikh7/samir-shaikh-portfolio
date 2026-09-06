@@ -110,7 +110,7 @@ export default function Services() {
               key={skill.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: skill.delay }}
               whileHover={{ y: -8 }}
               className="group relative bg-gray-50 dark:bg-card rounded-[16px] border border-gray-200 dark:border-border p-6 transition-all hover:border-accent/50 dark:hover:border-accent/50 hover:shadow-[0_0_30px_rgba(0,229,255,0.1)] flex flex-col h-full"

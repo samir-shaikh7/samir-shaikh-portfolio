@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect, useId } from "react";
-import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import FallbackImage from "../ui/FallbackImage";
+import ThorTechStack from "./ThorTechStack";
 
 // ===================================================================================
 // TECH DEFINITIONS & COORDINATE SYSTEM
@@ -255,7 +256,7 @@ const techs: TechItem[] = [
   },
 ];
 
-export default function TechStack() {
+function LokiTechStack() {
   const [activeTechIndex, setActiveTechIndex] = useState<number | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   const uniquePrefix = useId().replace(/:/g, "_");
@@ -330,13 +331,8 @@ export default function TechStack() {
 
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 text-center relative z-10">
 
-        {/* Section Heading — Preserved 100% untouched */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-        >
+        {/* Section Heading — Static rendering to prevent reload on scroll */}
+        <div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold text-white mb-4 leading-tight">
             Cloud & DevOps
             <br className="lg:hidden" />
@@ -347,7 +343,7 @@ export default function TechStack() {
             The tools and platforms I use to build, automate, and manage cloud
             infrastructure and deployment pipelines.
           </p>
-        </motion.div>
+        </div>
 
         {/* Cinematic Timeline Interactive Stage */}
         <div
@@ -695,4 +691,25 @@ export default function TechStack() {
       </div>
     </section>
   );
+}
+
+export default function TechStack() {
+  const [mounted, setMounted] = useState(false);
+  const { theme, resolvedTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <LokiTechStack />;
+  }
+
+  const isLight = resolvedTheme === "light" || theme === "light";
+
+  if (isLight) {
+    return <ThorTechStack />;
+  }
+
+  return <LokiTechStack />;
 }

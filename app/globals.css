@@ -41,6 +41,7 @@
 
 html {
   scroll-behavior: smooth;
+  touch-action: pan-x pan-y;
 }
 
 /* Fix for AnimatedHeading spacing issues */

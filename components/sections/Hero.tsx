@@ -7,6 +7,7 @@ import {
   useMotionValue,
   useSpring,
   useTransform,
+  useScroll,
 } from "framer-motion";
 import {
   Cloud,
@@ -136,12 +137,7 @@ export default function Hero() {
   };
 
   /* scroll parallax for the blob */
-  const scrollY = useMotionValue(0);
-  useEffect(() => {
-    const onScroll = () => scrollY.set(window.scrollY);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [scrollY]);
+  const { scrollY } = useScroll();
   const blobY = useTransform(scrollY, [0, 600], [0, -80]);
 
   return (

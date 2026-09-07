@@ -262,12 +262,18 @@ function LokiTechStack() {
   const uniquePrefix = useId().replace(/:/g, "_");
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 640);
+    const mql = window.matchMedia("(max-width: 639px)");
+    const onChange = (e: MediaQueryListEvent | MediaQueryList) => {
+      setIsMobile(e.matches);
     };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    onChange(mql);
+    if (mql.addEventListener) {
+      mql.addEventListener("change", onChange);
+      return () => mql.removeEventListener("change", onChange);
+    } else {
+      mql.addListener(onChange);
+      return () => mql.removeListener(onChange);
+    }
   }, []);
 
   // Screen-specific dimensions
@@ -625,12 +631,6 @@ function LokiTechStack() {
                     e.stopPropagation();
                     setActiveTechIndex(isActive ? null : idx);
                   }}
-                  tabIndex={0}
-                  onFocus={() => setActiveTechIndex(idx)}
-                  onBlur={() => setActiveTechIndex(null)}
-                  role="button"
-                  aria-pressed={isActive}
-                  aria-label={`${tech.name} technology node`}
                 >
                   {/* Subtle Floating Ambient Glow Behind Badge */}
                   <div
@@ -667,19 +667,13 @@ function LokiTechStack() {
                     />
                   </div>
 
-                  {/* High Contrast Tooltip Badge */}
+                  {/* Tooltip Label Badge */}
                   <div
-                    className={`absolute left-1/2 -translate-x-1/2 -bottom-7 sm:-bottom-8 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-black/95 border text-[10px] sm:text-[11.5px] font-bold tracking-wide text-white shadow-xl pointer-events-none whitespace-nowrap transition-all duration-200 z-50 ${isActive
-                      ? "opacity-100 scale-100 border-amber-400/80 shadow-[0_0_15px_rgba(245,158,11,0.4)]"
-                      : "opacity-0 scale-90 border-emerald-500/40 group-hover:opacity-100 group-hover:scale-100"
+                    className={`absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-md text-[11px] sm:text-xs font-semibold whitespace-nowrap pointer-events-none transition-all duration-200 shadow-lg ${isActive
+                      ? "opacity-100 translate-y-0 bg-gray-900 text-white border border-emerald-400"
+                      : "opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 bg-gray-900/90 text-white border border-transparent"
                       }`}
                   >
-                    <span
-                      className={`font-extrabold mr-1.5 transition-colors ${isActive ? "text-amber-400" : "text-emerald-400"
-                        }`}
-                    >
-                      •
-                    </span>
                     {tech.name}
                   </div>
                 </div>

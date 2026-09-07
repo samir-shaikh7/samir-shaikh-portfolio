@@ -44,12 +44,7 @@ html {
   touch-action: pan-x pan-y;
 }
 
-/* Fix for AnimatedHeading spacing issues */
-h1 span,
-h2 span,
-h3 span {
-  white-space: pre-wrap !important;
-}
+
 
 body {
   background: var(--background);

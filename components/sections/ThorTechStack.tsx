@@ -394,23 +394,45 @@ export default function ThorTechStack() {
           {/* ==================================================================== */}
           {/* CENTERPIECE: THOR WITH ELECTRIC LIGHTNING AURA */}
           {/* ==================================================================== */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none flex items-center justify-center">
-            {/* Outer Electric Atmosphere Halo */}
-            <div className="absolute w-[240px] h-[240px] sm:w-[500px] sm:h-[500px] rounded-full bg-[radial-gradient(circle,_rgba(56,189,248,0.22)_0%,_rgba(14,165,233,0.08)_50%,_transparent_75%)] blur-2xl animate-pulse" />
+          <div
+            className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none flex items-center justify-center"
+            style={{
+              width: isMobile ? "165px" : "440px",
+              height: isMobile ? "165px" : "440px",
+            }}
+          >
+            {/* Ambient Multi-Ring Cosmic Auras & Intense Glow Backdrop */}
+            <div
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] rounded-full bg-[radial-gradient(circle,_rgba(56,189,248,0.35)_0%,_rgba(14,165,233,0.15)_45%,_transparent_75%)] pointer-events-none filter blur-xl animate-pulse"
+            />
+
+            {/* Intense Sky Blue Inner Backdrop Glow */}
+            <div className="absolute inset-0 rounded-full bg-sky-500/20 blur-2xl pointer-events-none animate-pulse" />
+
+            {/* Rotating Subtle Celestial Energy Rings */}
+            <div
+              className="absolute w-[88%] h-[88%] rounded-full border border-sky-400/40 border-dashed pointer-events-none animate-spin shadow-[0_0_20px_rgba(56,189,248,0.3)]"
+              style={{ animationDuration: "55s" }}
+            />
+            <div
+              className="absolute w-[105%] h-[105%] rounded-full border border-sky-500/30 border-dotted pointer-events-none animate-spin"
+              style={{ animationDuration: "80s", animationDirection: "reverse" }}
+            />
 
             {/* Thor Image Container with Character Electric Overlay */}
-            <div className="relative w-[165px] sm:w-[420px] aspect-square flex items-center justify-center">
-              {/* Radial gradient mask to blend Thor smoothly into light background */}
-              <div className="w-full h-full relative overflow-hidden rounded-full p-2">
-                <Image
-                  src="/thor.png"
-                  alt="Thor - Cloud Infrastructure Lightning Network"
-                  fill
-                  sizes="(max-width: 640px) 165px, 420px"
-                  className="object-contain thor-character-lightning transition-transform duration-500 hover:scale-105"
-                  priority
-                />
-              </div>
+            <div className="relative w-full h-full flex items-center justify-center rounded-full overflow-hidden [mask-image:radial-gradient(circle_at_center,black_55%,transparent_88%)] [-webkit-mask-image:radial-gradient(circle_at_center,black_55%,transparent_88%)]">
+              <Image
+                src="/thor.png"
+                alt="Thor - Cloud Infrastructure Lightning Network"
+                fill
+                sizes="(max-width: 640px) 165px, 440px"
+                className="object-contain object-center thor-character-lightning drop-shadow-[0_0_25px_rgba(56,189,248,0.6)] rounded-full transition-transform duration-500 hover:scale-105"
+                priority
+              />
+              {/* Overlay Energy Sheen on top of PNG Image */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(56,189,248,0.2)_0%,_rgba(14,165,233,0.1)_45%,_transparent_75%)] pointer-events-none rounded-full mix-blend-screen animate-pulse" />
+              {/* Seamless Radial Vignette so image edges softly blend */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_35%,_rgba(248,250,252,0.6)_70%,_#f9fafb_98%)] dark:bg-[radial-gradient(circle_at_center,_transparent_35%,_rgba(0,0,0,0.75)_70%,_black_98%)] pointer-events-none rounded-full" />
             </div>
           </div>
 

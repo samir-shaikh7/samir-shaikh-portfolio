@@ -24,7 +24,7 @@ export default function CustomCursor() {
     const handleMouseMove = (e: MouseEvent) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
-      if (!isVisible) setIsVisible(true);
+      setIsVisible((prev) => (prev ? prev : true));
     };
 
     const handleMouseLeave = () => {
@@ -62,7 +62,7 @@ export default function CustomCursor() {
       document.removeEventListener("mouseenter", handleMouseEnter);
       window.removeEventListener("mouseover", handleMouseOver);
     };
-  }, [mouseX, mouseY, isVisible]);
+  }, []);
 
   if (!isVisible) return null;
 

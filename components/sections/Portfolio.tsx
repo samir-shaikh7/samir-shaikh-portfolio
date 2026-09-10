@@ -5,23 +5,13 @@ import {
   Cloud,
   GitBranch,
   Shield,
+  Server,
   Terminal,
   Globe,
 } from "lucide-react";
 import ProjectCard, { type ProjectData } from "@/components/ui/ProjectCard";
 
 const featuredProjects: ProjectData[] = [
-  {
-    category: "AWS / CLOUD",
-    title: "AWS ALB Zero Downtime Deployment Using Weighted Target Groups",
-    description:
-      "Implemented a zero-downtime deployment strategy using AWS Application Load Balancer and weighted target groups. Deployed Version 1 and Version 2 on separate EC2 instances, configured weighted routing to gradually shift traffic, and maintained the same ALB DNS URL throughout the deployment.",
-    tech: ["AWS EC2", "ALB", "Target Groups", "Weighted Routing", "Security Groups"],
-    icon: Shield,
-    color: "from-emerald-500/20 to-teal-500/20",
-    delay: 0.1,
-    github: "https://github.com/samir-shaikh7/aws-alb-zero-downtime-deployment",
-  },
   {
     category: "DEVOPS / CI-CD",
     title: "Enterprise Java DevOps CI/CD Pipeline on AWS",
@@ -32,6 +22,28 @@ const featuredProjects: ProjectData[] = [
     color: "from-red-500/20 to-pink-500/20",
     delay: 0.15,
     github: "https://github.com/samir-shaikh7/enterprise-java-devops-cicd",
+  },
+  {
+    category: "AWS / DEVOPS",
+    title: "End-to-End AWS DevOps CI/CD & Docker Deployment",
+    description:
+      "Implemented an end-to-end DevOps deployment workflow for a React application on AWS EC2. Configured Ubuntu Linux, Git, Node.js, PM2, Nginx reverse proxy, and UFW firewall. Built a Jenkins CI/CD pipeline to automate code checkout, application build, deployment, and Amazon S3 artifact upload. Dockerized the React application using a multi-stage Dockerfile and Docker Compose.",
+    tech: ["AWS EC2", "Ubuntu Linux", "Git", "GitHub", "Jenkins", "CI/CD", "Amazon S3", "Docker", "Docker Compose", "Nginx", "PM2"],
+    icon: Server,
+    color: "from-blue-500/20 to-cyan-500/20",
+    delay: 0.2,
+    github: "https://github.com/samir-shaikh7/DevOps-Challenge",
+  },
+  {
+    category: "AWS / CLOUD",
+    title: "AWS ALB Zero Downtime Deployment Using Weighted Target Groups",
+    description:
+      "Implemented a zero-downtime deployment strategy using AWS Application Load Balancer and weighted target groups. Deployed Version 1 and Version 2 on separate EC2 instances, configured weighted routing to gradually shift traffic, and maintained the same ALB DNS URL throughout the deployment.",
+    tech: ["AWS EC2", "ALB", "Target Groups", "Weighted Routing", "Security Groups"],
+    icon: Shield,
+    color: "from-emerald-500/20 to-teal-500/20",
+    delay: 0.1,
+    github: "https://github.com/samir-shaikh7/aws-alb-zero-downtime-deployment",
   },
   {
     category: "AWS / ARCHITECTURE",

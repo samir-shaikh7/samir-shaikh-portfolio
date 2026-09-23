@@ -13,6 +13,17 @@ import ProjectCard, { type ProjectData } from "@/components/ui/ProjectCard";
 
 const featuredProjects: ProjectData[] = [
   {
+    category: "CLOUD / INFRASTRUCTURE AS CODE",
+    title: "AWS Three-Tier Web Application Architecture using Terraform",
+    description:
+      "Designed and deployed a three-tier web application architecture on AWS using Terraform Infrastructure as Code. Built reusable Terraform modules for VPC, subnets, Internet Gateway, NAT Gateway, route tables, security groups, EC2, Application Load Balancer, and Amazon RDS. Automated EC2 application server configuration using User Data and managed infrastructure through Terraform variables, outputs, and module dependencies.",
+    tech: ["Terraform", "AWS", "Amazon VPC", "EC2", "Application Load Balancer", "Amazon RDS", "Infrastructure as Code"],
+    icon: Cloud,
+    color: "from-orange-500/20 to-yellow-500/20",
+    delay: 0.2,
+    github: "https://github.com/samir-shaikh7/aws-three-tier-architecture-terraform",
+  },
+  {
     category: "DEVOPS / CI-CD",
     title: "Enterprise Java DevOps CI/CD Pipeline on AWS",
     description:

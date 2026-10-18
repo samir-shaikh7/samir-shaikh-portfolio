@@ -75,7 +75,7 @@ export default function Process() {
                 <div className="flex flex-wrap gap-3 text-sm text-gray-500 dark:text-muted">
                   <span className="inline-flex items-center gap-1.5">
                     <Calendar className="w-3.5 h-3.5" />
-                    May 2026 – November 2026
+                    May 2026 – Present 2026
                   </span>
                   <span className="inline-flex items-center gap-1.5">
                     <MapPin className="w-3.5 h-3.5" />

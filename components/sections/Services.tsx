@@ -24,7 +24,7 @@ const expertise = [
   {
     title: "Linux",
     description: "Linux administration, command-line operations, and troubleshooting.",
-    technologies: ["Ubuntu", "File Management", "Permissions", "Users & Groups", "Processes", "Services", "Networking", "Monitoring", "Troubleshooting", "Shell Scripting"],
+    technologies: ["Ubuntu", "File Management", "Permissions", "Users & Groups", "Processes", "Services", "Networking", "Monitoring", "Troubleshooting", "Bash & Shell Scripting"],
     icon: Terminal,
     color: "from-yellow-500/20 to-orange-500/20",
     delay: 0.15,
@@ -32,7 +32,7 @@ const expertise = [
   {
     title: "Docker",
     description: "Containerization and portable application environments.",
-    technologies: ["Images", "Containers", "Dockerfiles", "Volumes", "Networks", "Docker Compose"],
+    technologies: ["Images", "Containers", "Dockerfile", "Volumes", "Networks", "Docker Compose"],
     icon: Container,
     color: "from-blue-500/20 to-cyan-500/20",
     delay: 0.2,
@@ -40,7 +40,7 @@ const expertise = [
   {
     title: "Kubernetes",
     description: "Container orchestration and Kubernetes fundamentals.",
-    technologies: ["Pods", "Deployments", "Services", "ConfigMaps", "Secrets", "Namespaces", "Minikube"],
+    technologies: ["Pods", "Deployments", "Services", "ConfigMaps", "Secrets", "Namespaces", "Minikube", "kubectl", "YAML Manifests"],
     icon: Server,
     color: "from-blue-600/20 to-indigo-500/20",
     delay: 0.25,
@@ -48,7 +48,7 @@ const expertise = [
   {
     title: "Terraform",
     description: "Infrastructure as Code for provisioning cloud infrastructure.",
-    technologies: ["HCL", "Providers", "Resources", "Variables", "Outputs", "State", "Terraform Workflow"],
+    technologies: ["HCL", "Providers", "Resources", "Variables", "Outputs", "State", "Terraform Workflow", "Modules"],
     icon: FileCode,
     color: "from-violet-500/20 to-purple-500/20",
     delay: 0.3,
@@ -56,7 +56,7 @@ const expertise = [
   {
     title: "Jenkins & CI/CD",
     description: "Automated application build and deployment workflows.",
-    technologies: ["Jenkins", "Git", "GitHub", "Maven", "CI/CD", "Build Automation"],
+    technologies: ["Jenkins", "Git", "GitHub", "Maven", "CI/CD", "Build Automation", "SonarQube", "Apache Tomcat", "Pipeline as Code"],
     icon: Settings,
     color: "from-red-500/20 to-pink-500/20",
     delay: 0.35,
@@ -76,6 +76,14 @@ const expertise = [
     icon: GitBranch,
     color: "from-green-500/20 to-emerald-500/20",
     delay: 0.45,
+  },
+  {
+    title: "Networking",
+    description: "Networking fundamentals for cloud infrastructure, connectivity, and security.",
+    technologies: ["TCP/IP", "DNS", "HTTP/HTTPS", "DHCP", "Subnetting", "Routing", "Route Tables", "Security Groups", "Network ACLs (NACLs)", "NAT Gateway"],
+    icon: Server,
+    color: "from-indigo-500/20 to-blue-500/20",
+    delay: 0.5,
   },
 ];
 
@@ -104,7 +112,7 @@ export default function Services() {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {expertise.map((skill) => (
             <motion.div
               key={skill.title}
@@ -121,11 +129,11 @@ export default function Services() {
               </div>
 
               {/* Title & Description */}
-              <h3 className="text-xl font-bold text-black dark:text-white mb-2 shrink-0">
+              <h3 className="text-2xl font-bold text-black dark:text-white mb-2 shrink-0">
                 {skill.title}
               </h3>
-              
-              <p className="text-[15px] text-gray-600 dark:text-muted mb-6 leading-relaxed shrink-0">
+
+              <p className="text-base text-gray-600 dark:text-muted mb-6 leading-relaxed shrink-0">
                 {skill.description}
               </p>
 
@@ -134,7 +142,7 @@ export default function Services() {
                 {skill.technologies.map((tech, i) => (
                   <span
                     key={i}
-                    className="px-2.5 py-1 text-xs font-medium rounded-md bg-white dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10 shadow-sm dark:shadow-none"
+                    className="px-2.5 py-1 text-sm font-medium rounded-md bg-white dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10 shadow-sm dark:shadow-none"
                   >
                     {tech}
                   </span>

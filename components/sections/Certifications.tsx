@@ -16,9 +16,24 @@ const certifications: Certification[] = [
     issued: "January 2026",
   },
   {
-    name: "AWS and DevOps",
+    name: "AWS DevOps Training - Certificate of Completion",
     issuer: "Full Stack Academy",
-    issued: "January 2026",
+    issued: "September 2026",
+  },
+  {
+    name: "DevOps Challenge - Certificate of Completion",
+    issuer: "Full Stack Academy",
+    issued: "August 2026",
+  },
+  {
+    name: "AWS Challenge - Certificate of Completion",
+    issuer: "Full Stack Academy",
+    issued: "July 2026",
+  },
+  {
+    name: "Linux Challenge - Certificate of Completion",
+    issuer: "Full Stack Academy",
+    issued: "June 2026",
   },
   {
     name: "Generative AI with AWS",
@@ -31,17 +46,7 @@ const certifications: Certification[] = [
     issued: "February 2026",
   },
   {
-    name: "Linux Challenge",
-    issuer: "Full Stack Academy",
-    issued: "July 2026",
-  },
-  {
-    name: "AWS Challenge",
-    issuer: "Full Stack Academy",
-    issued: "August 2026",
-  },
-  {
-    name: "HTML & CSS",
+    name: "HTML & CSS - Certificate of Completion",
     issuer: "HCL GUVI",
     issued: "June 2025",
   },

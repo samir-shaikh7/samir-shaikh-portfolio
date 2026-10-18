@@ -24,6 +24,17 @@ const featuredProjects: ProjectData[] = [
     github: "https://github.com/samir-shaikh7/aws-three-tier-architecture-terraform",
   },
   {
+    category: "AWS / DEVOPS",
+    title: "End-to-End AWS DevOps CI/CD & Docker Deployment",
+    description:
+      "Implemented an end-to-end DevOps deployment workflow for a React application on AWS EC2. Configured Ubuntu Linux, Git, Node.js, PM2, Nginx reverse proxy, and UFW firewall. Built a Jenkins CI/CD pipeline to automate code checkout, application build, deployment, and Amazon S3 artifact upload. Dockerized the React application using a multi-stage Dockerfile and Docker Compose.",
+    tech: ["AWS EC2", "Ubuntu Linux", "Git", "GitHub", "Jenkins", "CI/CD", "Amazon S3", "Docker", "Docker Compose", "Nginx", "PM2"],
+    icon: Server,
+    color: "from-blue-500/20 to-cyan-500/20",
+    delay: 0.2,
+    github: "https://github.com/samir-shaikh7/End-to-End-AWS-DevOps-CICD-Docker-Deployment",
+  },
+  {
     category: "DEVOPS / CI-CD",
     title: "Enterprise Java DevOps CI/CD Pipeline on AWS",
     description:
@@ -33,17 +44,6 @@ const featuredProjects: ProjectData[] = [
     color: "from-red-500/20 to-pink-500/20",
     delay: 0.15,
     github: "https://github.com/samir-shaikh7/enterprise-java-devops-cicd",
-  },
-  {
-    category: "AWS / DEVOPS",
-    title: "End-to-End AWS DevOps CI/CD & Docker Deployment",
-    description:
-      "Implemented an end-to-end DevOps deployment workflow for a React application on AWS EC2. Configured Ubuntu Linux, Git, Node.js, PM2, Nginx reverse proxy, and UFW firewall. Built a Jenkins CI/CD pipeline to automate code checkout, application build, deployment, and Amazon S3 artifact upload. Dockerized the React application using a multi-stage Dockerfile and Docker Compose.",
-    tech: ["AWS EC2", "Ubuntu Linux", "Git", "GitHub", "Jenkins", "CI/CD", "Amazon S3", "Docker", "Docker Compose", "Nginx", "PM2"],
-    icon: Server,
-    color: "from-blue-500/20 to-cyan-500/20",
-    delay: 0.2,
-    github: "https://github.com/samir-shaikh7/DevOps-Challenge",
   },
   {
     category: "AWS / CLOUD",
